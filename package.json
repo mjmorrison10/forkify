@@ -1,0 +1,23 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjmorrison10/forkify.git"
+  },
+  "author": "Michael Morrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjmorrison10/forkify/issues"
+  },
+  "homepage": "https://github.com/mjmorrison10/forkify#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
+}
