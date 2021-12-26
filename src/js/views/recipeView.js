@@ -90,7 +90,7 @@ class RecipeView {
         <h2 class="heading--2">Recipe ingredients</h2>
         <ul class="recipe__ingredient-list">
           ${this.#data.ingredients
-            .map(this.#generateMarkupIngredients)
+            .map(this.#generateMarkupIngredient)
             .join('')}
 
 
