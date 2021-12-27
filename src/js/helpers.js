@@ -8,7 +8,7 @@ const timeout = function (s) {
     }, s * 1000);
   });
 };
-
+ 
 export const getJSON = async function (url) {
   try {
     const fetchPro = fetch(url);

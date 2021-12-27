@@ -12,6 +12,8 @@ if (module.hot) {
 
 const controlRecipes = async function () {
   try {
+    resultsView._resultsScrollToTop()
+
     const id = window.location.hash.slice(1);
 
     if (!id) return;
@@ -29,7 +31,6 @@ const controlRecipes = async function () {
 
 const controlSearchResults = async function () {
   try {
-    resultsView.renderSpinner();
 
     // get search query
     const query = searchView.getQuery();
@@ -39,7 +40,7 @@ const controlSearchResults = async function () {
     await model.loadSearchResults(query);
 
     // render results
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage());
   } catch (err) {
     console.log(err);
   }

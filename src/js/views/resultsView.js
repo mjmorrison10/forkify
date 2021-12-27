@@ -7,8 +7,11 @@ class resultsView extends View {
   _message = ``;
 
   _generateMarkup() {
-    console.log(this._data);
     return this._data.map(this._generateMarkupPreview).join('');
+  }
+
+  _resultsScrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   _generateMarkupPreview(result) {
