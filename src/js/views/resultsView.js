@@ -10,10 +10,6 @@ class resultsView extends View {
     return this._data.map(this._generateMarkupPreview).join('');
   }
 
-  _resultsScrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
   _generateMarkupPreview(result) {
     return `
           <li class="preview">
