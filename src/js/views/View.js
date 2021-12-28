@@ -24,23 +24,23 @@ export default class View {
       const curEl = curElements[i];
       // console.log(curEl, newEl.isEqualNode(curEl));
 
-      // updates changed text
+      // Updates changed TEXT
       if (
         !newEl.isEqualNode(curEl) &&
-        newEl.firstChild.nodeValue.trim() !== ''
+        newEl.firstChild?.nodeValue.trim() !== ''
       ) {
-        // console.log('log', newEl.firstChild.nodeValue.trim());
+        // console.log('💥', newEl.firstChild.nodeValue.trim());
         curEl.textContent = newEl.textContent;
       }
 
-      // update change attributes
-      if (!newEl.isEqualNode(curEl)) {
+      // Updates changed ATTRIBUES
+      if (!newEl.isEqualNode(curEl))
         Array.from(newEl.attributes).forEach(attr =>
           curEl.setAttribute(attr.name, attr.value)
         );
-      }
     });
   }
+
 
   _clear() {
     this._parentElement.innerHTML = '';
@@ -90,3 +90,4 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }
+

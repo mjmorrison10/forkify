@@ -32,11 +32,3 @@ class resultsView extends View {
 }
 
 export default new resultsView();
-
-{
-  /* <div class="preview__user-generated">
-<svg>
-  <use href="${icons}#icon-user"></use>
-</svg>
-</div> */
-}
